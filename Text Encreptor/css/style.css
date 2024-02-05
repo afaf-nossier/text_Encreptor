@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-image: url(/img/grid.svg);
+    background-color:#161616;;
+}
+header{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+header div{
+    margin-left: 35%;
+    margin-top: 60px;
+    background-color: #232323;
+    width: 30%;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+    display:flex;
+    justify-content: space-between;
+}
+header div button{
+    background-color: #232323;
+    border-radius: 10px;
+    padding: 10px 30px;
+    border: none;
+    color:  #a0a0a0;
+    font-size: 17px;
+
+}
+header div button i ,form button i {
+    margin-right: 10px;
+}
+header div button:hover{
+    background-color: #343434;
+    cursor: pointer;
+}
+.active{
+    background-color: #343434;
+}
+.from-encrept form, .decrypt-msg{
+    margin-top: 70px;
+    width: 50%;
+    height: auto;
+    margin-left: 26%;
+}
+input[type=text] ,form button ,.decrypt-msg ,select ,.loadText input{
+    width: 100%;
+    color: #aba9a9;
+    background-color: #232323;
+    padding: 13px 10px;
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #505050;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    outline: none;
+}
+input[type=text]:focus{
+    background-color: #232323;
+}
+form button{
+    background-color:  #282828;
+    color: #aba9a9;
+    
+}
+form button:hover{
+    background-color:  #3b3b3b;
+
+}
+label ,select{
+    color: #979696;
+    font-size: 18px;
+}
+form button:hover{
+    cursor: pointer;
+}
+.decrypt-msg{
+    color: #aba9a9;
+    height: 50px;
+    margin-left:-1px ;
+}
+.rotate{
+    display: inline-block;
+    transform: rotate(180deg) !important;
+position: relative;
+top: 11px;
+transition-duration: 0.5s;
+}
+.revrotate{
+    transform: rotate(0deg) !important;
+    transition-duration: 0.5s;
+    position: relative;
+    top: 0px;
+}
+.loadText textarea{
+    width: 100%;
+    color: #d0cccc ;
+    background-color: #2f2f2f;
+    height: 150px;
+    padding: 15px;
+    outline: none;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+
+}

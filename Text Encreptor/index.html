@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encreptor </title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="main.js">
+</head>
+<body>
+    
+    <section class="header" >
+        <header> 
+            <h1>PlainText <span class="span"> → </span> CipherText </h1>
+            <div class="btn">
+                <button class="btnEncreptText active">
+                    <i class="fa-regular fa-comment"></i> 
+                        Encrypt Text</button>
+    
+                    <button class="btnEncryptFile">
+                        <i class="fa-solid fa-file-word"></i>
+                        Encrypt File</button>
+            </div>
+            <div class="btn" id="btn" style="display: block;">
+                <button class="btnEncrept active"> 
+                <i class="fa-solid fa-key"></i>
+                    Encrypt Text</button>
+
+                <button class="btnDecrypt">
+                    <i class="fa-solid fa-unlock-keyhole"></i>
+                    Decrypt Text</button>
+            </div>
+        </header>
+    </section>
+    <section class="from-encrept">
+
+        <form id="encreptText" style="display: block;">
+
+            <label for="algorithm"> Which algorithm are you using?</label>
+            
+            <select id="algorithm" >
+                <option value="caesarCipher" selected>caesar Cipher </option>
+                <option value="Affine">Affine Cipher </option>
+                <option value="Vigener">Vigener Cipher </option>
+                <option value="AutoKey">AutoKey Cipher</option>
+
+            </select>
+
+            <label for="pmsg">1. Enter a message</label>
+            <input type="text" id="pmsg" name="pmsg" placeholder=" Plain Text : Enter word you want encrept  ">
+            
+
+            <div id="kays" style="display: block;">
+                    <label for="key">2. Enter a Key</label>
+                    <input type="text" id="key" name="key" placeholder=" key : 12"> 
+            </div>
+
+            <div class="key"  style="display: none;">
+                <label for="key1">2. - Enter a first Key</label>
+                <input type="text" id="key1" name="key1" placeholder=" key1 : 12"> 
+                <label for="key2">- Enter a second Key</label>
+                <input type="text" id="key2" name="key2" placeholder=" key2 : 9"> 
+            </div>
+
+            <div class="divEncrypt"  style="display: block" >
+                <label for="Encrept" >3. Encrypt message </label>
+                <button class="encrypt active" type="submit" id="Encrypt">  
+                    <i class="fa-solid fa-key"></i>
+                        Encrypt Text</button>
+            </div>
+
+            <div class="divDecrypt" style="display: none" >
+                <label for="decrypt" >3. Decrypt message </label>
+                <button type="submit" id="decrypt" class="decrypt">  
+                    <i class="fa-solid fa-unlock-keyhole"></i>
+                        Decrypt Text</button>
+            </div>
+        
+
+            <label for="decrypt">5. Decrypt message </label>
+            <input type="text" id="decrypt-msg" name="decrypt" class="decrypt-msg" placeholder=" Decrypt message is : ">
+
+
+        </form>
+
+        <form id="encreptFile" style="display: none;"> 
+            <div class="loadText">
+                <input type="file" onchange="loadText(event)"></input>
+                <label>1. Chosse file you want to encrypt </label>
+                <textarea class="textarea"></textarea>
+
+                <label for="algorithm">2. Which algorithm are you using?</label>
+                <select id="algorithm" >
+                    <option value="caesarCipher" selected>caesar Cipher </option>
+                    <option value="Vigener">Vigener Cipher </option>
+                    <option value="AutoKey">AutoKey Cipher</option>
+    
+                </select>
+
+                <div id="kays" >
+                    <label for="key">3. Enter a Key</label>
+                    <input type="text" id="keyF" name="key" placeholder=" key : 12"> 
+            </div>
+
+                <label for="Encrept" >4. Encrypt message </label>
+                <button class="encryptfile active" type="submit" id="Encrypt">  
+                    <i class="fa-solid fa-key"></i>
+                        Encrypt Text</button>
+
+                <label>5. decrypt file</label>
+                <textarea class="textareaEn"></textarea>
+            </div>
+        </form>
+
+    </section>
+
+    <script src="main.js"></script>
+</html>
